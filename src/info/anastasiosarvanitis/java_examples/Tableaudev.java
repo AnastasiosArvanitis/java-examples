@@ -57,12 +57,18 @@ public class Tableaudev {
 	}
 	
 	/** Adding elements to all the available spaces and printing it **/
-	public static void remplir(int[] arr, int element) {
+	public static int[] remplir(int[] arr, int element) {
 		
 		for (int i = 0; i < arr.length; i++) {
 			ajouterElement(arr, element);
 		}
 		afficheTableau(arr);
+		return arr;
+	}
+	
+	public static boolean testRemplir() {
+		return false;
+		
 	}
 
 	public static void main(String[] args) {
