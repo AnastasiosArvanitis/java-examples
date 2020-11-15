@@ -51,15 +51,40 @@ public class WordsAndStrings {
 		afficheTableau(arr);
 	}
 	
+	private static boolean chercherMot(String mot) throws FileNotFoundException {
+		File file = new File("./dictionnaire.txt");
+		Scanner scan = new Scanner(file);
+		String motInFile = "";
+		boolean found = false;
+		
+		while (scan.hasNextLine()) {
+			motInFile = scan.nextLine();
+			if (motInFile.equals(mot)) {
+				found = true;
+				break;
+			} 
+		}
+		
+		if (found) {
+			System.out.println("Searching the word " +mot+ " and found " +motInFile);
+		}
+		else {
+			System.out.println("Word " +mot+ " was not found...");
+		}
+		scan.close();
+		return found;
+	}
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		//tirerNombreAleatoirement(2,10);
 		
-		char[] demo = tirerMotAleatoirement(2);
+		char[] demo = tirerMotAleatoirement(22500);
 		afficheTableau(demo);
 		System.out.println();
 		melanger(demo);
-		
+		System.out.println();
+		chercherMot("abas");
 	}
 	
 }
