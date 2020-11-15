@@ -23,6 +23,7 @@ public class Tableaudev {
 		System.out.println();
 	}
 	
+	/** Printing the array with separator **/
 	public static void afficheTableau(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i]);
@@ -39,6 +40,7 @@ public class Tableaudev {
 		}
 	}
 	
+	/** Adding element only if there is no values, assuming no value equals 0  **/
 	public static boolean ajouterElement(int[] arr, int element) {
 		
 		boolean isEmpty = false;
@@ -54,6 +56,7 @@ public class Tableaudev {
 		return isEmpty;
 	}
 	
+	/** Adding elements to all the available spaces and printing it **/
 	public static void remplir(int[] arr, int element) {
 		
 		for (int i = 0; i < arr.length; i++) {
