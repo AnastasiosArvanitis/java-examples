@@ -14,6 +14,10 @@ public class Palindrome {
 		int length = inputString.length();
 		int i = length-1;
 		
+//		for (int i = length-1; i >=0; i--) {
+//			reversedString = reversedString + input.charAt(i);
+//		}
+		
 		while ( i >= 0 ) {
 			reverseString = reverseString + inputString.charAt(i);
 			i--;
