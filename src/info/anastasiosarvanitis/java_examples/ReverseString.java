@@ -14,7 +14,7 @@ public class ReverseString {
 		int i = 0;
 		int j = copyStr.length-1;
 		
-		while (i < j) {
+		while (j > i) {
 			tmp = copyStr[i];
 			copyStr[i] = copyStr[j];
 			copyStr[j] = tmp;
